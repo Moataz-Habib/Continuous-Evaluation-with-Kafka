@@ -207,6 +207,56 @@ process aims to fine-tune the models to enhance the results.
   </tr>
 </table>
 
+**Discuss and analyze the results.**
 
-   
+Employing ANOVA with Random Forest and XGBoost yielded F1 scores comparable to those from the original feature set, despite the
+reduced number of features. This demonstrates that feature selection via ANOVA can streamline the model without significant loss
+of predictive power. Hyperparameter optimization through GridSearchCV revealed that Random Forest, when applied to the
+common feature set, slightly outperformed XGBoost on the same set. However, both were marginally outpaced by their ANOVAenhanced counterparts. The slight drop in F1 score for the common feature set is considered acceptable given the benefits of a more
+parsimonious model, which simplifies complexity while maintaining near-optimal performance. so i choose the randomforest with
+common features as the champion model.
+
+## 1 - Dynamic Model
+
+**Windows use 1,000 datapoints**
+
+The consumer furnished all the data, and i create a function that is capable of perusing 1000 datapoints and appending them to a
+collection. The outcome of this function is a list. Following this, I create another function with the purpose of processing these 1000
+datapoints, which are encoded in binary format, and convert them into a data frame resembling static data.
+
+**Correct performance metrics are selected and justified**
+
+I continue to use the F1 score as the metric to compromise between both the precision and recall scores equally.
+
+**Training reevaluation process is clearly described**
+
+The static model was retrieved from a pickle file. At the start, the static and dynamic models were identical. Afterward, a function was
+devised to preprocess the streaming data, applying identical preprocessing steps as those executed on the static dataset. Feature
+selection was carried out on this data in accordance with the selection criteria established by the static model, followed by data scaling
+using the scaler preserved from the previously saved model.
+A dynamic model retraining mechanism is instituted, triggered by the F1-score falling below the 86% benchmark. This threshold was
+set following an analysis that indicated most data batches typically exceed an 86% F1-score. Thus, to sustain optimal model
+performance, retraining is initiated when the F1-score descends below this set point. For retraining, I have adopted a methodology
+where incoming Kafka data batches are combined with the static dataset of 40,000 rows, ensuring a balanced representation through
+stratification, before retraining the model on this amalgamated dataset comprising both static and newly appended Kafka batch data.
+
+**Static and Dynamic models are evaluated**
+
+F1-Scores for both static and dynamic models for each batch were recorded in a list for performance tracking purposes. Should the
+dynamic model's F1-Score fall beneath a predetermined benchmark (0.86), a retraining sequence would be triggered, with the
+revised F1-Score being recorded post-retraining. This strategy enabled ongoing assessment and adjustment of the dynamic model's
+efficacy throughout the data streaming activity.
+
+**Plot the results obtained for both models**
+
+![Example Image](/Images/img19.PNG)
+
+**Analyze the results obtained for both models.**
+
+The results indicate that the static model provides a consistent baseline performance across data batches. The dynamic model
+shows variability, reflecting its ability to adapt through retraining when the F1 Score falls below the 0.86 threshold. This retraining
+generally results in performance improvements, demonstrating the effectiveness of updating the model with new data. While both
+models perform similarly, the dynamic model's adaptability may offer advantages in responding to evolving data patterns, making it
+a valuable approach for real-time predictive analysis.
+
 
