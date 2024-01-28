@@ -54,3 +54,34 @@ Good luck and have fun!
 2. [DataFlair Apache Kafka Tutorial](https://data-flair.training/blogs/apache-kafka-tutorial/)
 3. [Hello Kafka World - The Complete Guide to Kafka with Docker and Python](https://medium.com/big-data-engineering/hello-kafka-world-the-complete-guide-to-kafka-with-docker-and-python-f788e2588cf)
 
+## 1 - Static Model
+
+**Validate data imbalanced with justifications.**
+
+'No' (target not attacked) accounts for 120,895 instances, which is about 54.90% of the data. ‘Yes' (target attacked) accounts for
+147,179 instances, which is about 45.10% of the data. The dataset is relatively balanced since both classes are well-represented.
+
+![Example Image](/Images/img6.PNG)
+
+**Statistical analysis of data**
+
+*Feature distributions:*
+
+*Histograms:* Indicate a right-skewed distribution for most features with most values at the lower end.
+*Boxplots:* Confirm the skewness, showing medians towards the lower end and highlighting outliers.
+
+<table>
+  <tr>
+    <td>
+      <img src="/Images/img6.PNG" alt="Histograms" width="500"/>
+      <p align="center">Histograms</p>
+    </td>
+    <td>
+      <img src="/Images/img7.PNG" alt="Boxplots" width="500"/>
+      <p align="center">Boxplots</p>
+    </td>
+  </tr>
+</table>
+
+   
+
