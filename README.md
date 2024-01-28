@@ -65,20 +65,21 @@ Good luck and have fun!
 
 **Statistical analysis of data**
 
-*Feature distributions:*
+Feature distributions:
 
-*Histograms:* Indicate a right-skewed distribution for most features with most values at the lower end.
-*Boxplots:* Confirm the skewness, showing medians towards the lower end and highlighting outliers.
+Histograms: Indicate a right-skewed distribution for most features with most values at the lower end.
+Boxplots: Confirm the skewness, showing medians towards the lower end and highlighting outliers.
+
 
 <table>
   <tr>
     <td>
-      <img src="/Images/img6.PNG" alt="Histograms" width="500"/>
-      <p align="center">Histograms</p>
+      <p align="center"><strong>Histograms</strong></p>
+      <img src="/Images/img7.PNG" alt="Histograms" width="500"/>
     </td>
     <td>
-      <img src="/Images/img7.PNG" alt="Boxplots" width="500"/>
-      <p align="center">Boxplots</p>
+      <p align="center"><strong>Boxplots</strong></p>
+      <img src="/Images/img8.PNG" alt="Boxplots" width="500"/>
     </td>
   </tr>
 </table>
