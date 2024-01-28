@@ -137,7 +137,52 @@ strength using F1 scores within both modeling.
   </tr>
 </table>
 
+Common Features: ['len', 'subdomain_length', 'subdomain', 'numeric', 'special', 'FQDN_count', 'lower', 'labels']
 
+**Data Splitting and justification**
+
+The data is split into training and testing sets, with 30% reserved for testing, allocating a significant portion of data to the training set
+ensures the model can learn effectively, MinMaxScaler is then applied to normalize the training data and subsequently transform the
+test data using the same scale.
+
+**Choose and justify the correct performance metric**
+
+The F1-Score has been adopted as the preferred metric to account for the minor data imbalance, ensuring a balanced trade-off
+between precision and recall. This metric is critical in our context as it equally weighs the importance of reducing false positives and
+avoiding missed attacks, providing an equilibrium that mitigates both excessive false alarms and overlooked threats.
+
+**Compare and describe the two models you will use**
+
+Random Forest and XGBoost were chosen for their robustness and effectiveness in handling diverse datasets and feature sets. Both
+models performed comparably across different feature selection methods (Mutual Information, RFE, ANOVA) and when applied to a
+common feature set. Notably, the common features (8 features) nearly matched the F1 scores achieved with the full selected
+features (11 features), indicating that a smaller, more focused feature set can yield similar predictive performance, streamlining the
+model without compromising on accuracy. This suggests that the models are efficient in extracting signal from the most relevant
+features, which is advantageous for computational efficiency and model interpretability
+
+**Plot the models’ results.**
+
+This plot depicts the F1 scores for each model, comparing the baseline performance with the performance after applying the three
+different feature selection methods.
+
+<table>
+  <tr>
+    <th style="text-align:center; font-size:24px;">F1 Scores for Different Feature Selection Methods (Random Forest)</th>
+    <th style="text-align:center; font-size:24px;">F1 Scores for Different Feature Selection Methods (XGBoost)</th>
+    <th style="text-align:center; font-size:24px;">F1 Scores for Random Forest and XGBoost on Common Features</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="/Images/img14.PNG" alt="Histograms" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+    </td>
+    <td>
+      <img src="/Images/img15.PNG" alt="Boxplots" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+    </td>
+    <td>
+      <img src="/Images/img16.PNG" alt="Third Image" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+    </td>
+  </tr>
+</table>
 
    
 
