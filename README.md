@@ -86,5 +86,24 @@ Boxplots: Confirm the skewness, showing medians towards the lower end and highli
   </tr>
 </table>
 
+Skewness: Positive skewness values for features like 'upper' show a right skew, while negative values for others like 'subdomain'
+suggest a left skew, indicating the direction and asymmetry of the distribution.
+
+<table>
+  <tr>
+    <th colspan="2" style="text-align:center; font-size:24px;">Right Skew</th>
+    <th colspan="2" style="text-align:center; font-size:24px;">Left Skew</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="/Images/img9.PNG" alt="Histograms" style="display:block; margin:auto;"/>
+    </td>
+    <td colspan="2">
+      <img src="/Images/img10.PNG" alt="Boxplots" style="display:block; margin:auto;"/>
+    </td>
+  </tr>
+</table>
+
+
    
 
