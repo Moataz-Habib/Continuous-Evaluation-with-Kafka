@@ -68,18 +68,20 @@ Good luck and have fun!
 Feature distributions:
 
 Histograms: Indicate a right-skewed distribution for most features with most values at the lower end.
-Boxplots: Confirm the skewness, showing medians towards the lower end and highlighting outliers.
 
+Boxplots: Confirm the skewness, showing medians towards the lower end and highlighting outliers.
 
 <table>
   <tr>
-    <td>
-      <p align="center"><strong>Histograms</strong></p>
-      <img src="/Images/img7.PNG" alt="Histograms" width="500"/>
+    <th colspan="2" style="text-align:center; font-size:24px;">Histograms</th>
+    <th colspan="2" style="text-align:center; font-size:24px;">Boxplots</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="/Images/img7.PNG" alt="Histograms" style="display:block; margin:auto;"/>
     </td>
-    <td>
-      <p align="center"><strong>Boxplots</strong></p>
-      <img src="/Images/img8.PNG" alt="Boxplots" width="500"/>
+    <td colspan="2">
+      <img src="/Images/img8.PNG" alt="Boxplots" style="display:block; margin:auto;"/>
     </td>
   </tr>
 </table>
