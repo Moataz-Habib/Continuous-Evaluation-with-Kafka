@@ -16,7 +16,7 @@ operative system:
 
 - If you are using windows then run the **docker_script.bat** file
 - Otherwise run the **docker_script.sh** file on Linux/MacOS.
-- 
+  
 This file will create two docker images wurstmeister/kafka and wurstmeister/zookeeper.
 For this activity you don’t have to worry about what they are or how they run, as everything
 is already configured. At the end of the installation.
@@ -49,6 +49,7 @@ Now you are ready to capture the data stream and start the data treatment for yo
 Good luck and have fun!
 
 **References:**
+
 1 https://kafka.apache.org/documentation.html
 2 https://data-flair.training/blogs/apache-kafka-tutorial/
 3 https://medium.com/big-data-engineering/hello-kafka-world-the-complete-guide-to-
