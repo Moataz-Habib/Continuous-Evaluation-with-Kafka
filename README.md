@@ -50,7 +50,7 @@ Good luck and have fun!
 
 **References:**
 
-1 https://kafka.apache.org/documentation.html
-2 https://data-flair.training/blogs/apache-kafka-tutorial/
-3 https://medium.com/big-data-engineering/hello-kafka-world-the-complete-guide-to-
-kafka-with-docker-and-python-f788e2588cfc
+1. [Apache Kafka Documentation](https://kafka.apache.org/documentation.html)
+2. [DataFlair Apache Kafka Tutorial](https://data-flair.training/blogs/apache-kafka-tutorial/)
+3. [Hello Kafka World - The Complete Guide to Kafka with Docker and Python](https://medium.com/big-data-engineering/hello-kafka-world-the-complete-guide-to-kafka-with-docker-and-python-f788e2588cf)
+
