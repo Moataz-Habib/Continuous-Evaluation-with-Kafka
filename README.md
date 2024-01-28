@@ -160,7 +160,7 @@ features (11 features), indicating that a smaller, more focused feature set can 
 model without compromising on accuracy. This suggests that the models are efficient in extracting signal from the most relevant
 features, which is advantageous for computational efficiency and model interpretability
 
-**Plot the models’ results.**
+**Plot the models’ results**
 
 This plot depicts the F1 scores for each model, comparing the baseline performance with the performance after applying the three
 different feature selection methods.
@@ -185,7 +185,7 @@ different feature selection methods.
   </tr>
 </table>
 
-**Hyperparameter tuning is correct and clear.**
+**Hyperparameter tuning is correct and clear**
 
 GridSearchCV was employed for hyperparameter tuning of both Random Forest and XGBoost models, using ANOVA-selected
 features and the identified common feature set. This method systematically works through multiple combinations of parameters,
@@ -207,7 +207,7 @@ process aims to fine-tune the models to enhance the results.
   </tr>
 </table>
 
-**Discuss and analyze the results.**
+**Discuss and analyze the results**
 
 Employing ANOVA with Random Forest and XGBoost yielded F1 scores comparable to those from the original feature set, despite the
 reduced number of features. This demonstrates that feature selection via ANOVA can streamline the model without significant loss
@@ -251,7 +251,7 @@ efficacy throughout the data streaming activity.
 
 ![Example Image](/Images/img19.PNG)
 
-**Analyze the results obtained for both models.**
+**Analyze the results obtained for both models**
 
 The results indicate that the static model provides a consistent baseline performance across data batches. The dynamic model
 shows variability, reflecting its ability to adapt through retraining when the F1 Score falls below the 0.86 threshold. This retraining
