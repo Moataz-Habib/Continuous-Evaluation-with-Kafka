@@ -96,10 +96,10 @@ suggest a left skew, indicating the direction and asymmetry of the distribution.
   </tr>
   <tr>
     <td colspan="2">
-      <img src="/Images/img9.PNG" alt="Histograms" style="display:block; margin:auto;"/>
+      <img src="/Images/img9.PNG" alt="Right Skew" style="display:block; margin:auto;"/>
     </td>
     <td colspan="2">
-      <img src="/Images/img10.PNG" alt="Boxplots" style="display:block; margin:auto;"/>
+      <img src="/Images/img10.PNG" alt="Left Skew" style="display:block; margin:auto;"/>
     </td>
   </tr>
 </table>
@@ -126,13 +126,13 @@ strength using F1 scores within both modeling.
   </tr>
   <tr>
     <td>
-      <img src="/Images/img11.PNG" alt="Histograms" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+      <img src="/Images/img11.PNG" alt="Mutual Information" style="display:block; margin:auto; width:100%; max-width:300px;"/>
     </td>
     <td>
-      <img src="/Images/img12.PNG" alt="Boxplots" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+      <img src="/Images/img12.PNG" alt="RFE" style="display:block; margin:auto; width:100%; max-width:300px;"/>
     </td>
     <td>
-      <img src="/Images/img13.PNG" alt="Third Image" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+      <img src="/Images/img13.PNG" alt="ANOVA" style="display:block; margin:auto; width:100%; max-width:300px;"/>
     </td>
   </tr>
 </table>
@@ -165,6 +165,7 @@ features, which is advantageous for computational efficiency and model interpret
 This plot depicts the F1 scores for each model, comparing the baseline performance with the performance after applying the three
 different feature selection methods.
 
+
 <table>
   <tr>
     <th style="text-align:center; font-size:24px;">F1 Scores for Different Feature Selection Methods (Random Forest)</th>
@@ -173,16 +174,39 @@ different feature selection methods.
   </tr>
   <tr>
     <td>
-      <img src="/Images/img14.PNG" alt="Histograms" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+      <img src="/Images/img14.PNG" alt="F1 Scores for Different Feature Selection Methods (Random Forest)" style="display:block; margin:auto; width:100%; max-width:300px;"/>
     </td>
     <td>
-      <img src="/Images/img15.PNG" alt="Boxplots" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+      <img src="/Images/img15.PNG" alt="F1 Scores for Different Feature Selection Methods (XGBoost)" style="display:block; margin:auto; width:100%; max-width:300px;"/>
     </td>
     <td>
-      <img src="/Images/img16.PNG" alt="Third Image" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+      <img src="/Images/img16.PNG" alt="F1 Scores for Random Forest and XGBoost on Common Features" style="display:block; margin:auto; width:100%; max-width:300px;"/>
     </td>
   </tr>
 </table>
+
+**Hyperparameter tuning is correct and clear.**
+
+GridSearchCV was employed for hyperparameter tuning of both Random Forest and XGBoost models, using ANOVA-selected
+features and the identified common feature set. This method systematically works through multiple combinations of parameters,
+cross-validating as it goes to determine which tune yields the most effective model performance, reflected in the F1 scores. The
+process aims to fine-tune the models to enhance the results.
+
+<table>
+  <tr>
+    <th colspan="2" style="text-align:center; font-size:24px;">Hyperparameter tuning for both Random Forest and XGBoost models using ANOVA</th>
+    <th colspan="2" style="text-align:center; font-size:24px;">Hyperparameter tuning for both Random Forest and XGBoost models using common feature</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="/Images/img17.PNG" alt="Hyperparameter tuning for both Random Forest and XGBoost models using ANOVA" style="display:block; margin:auto;"/>
+    </td>
+    <td colspan="2">
+      <img src="/Images/img18.PNG" alt="Hyperparameter tuning for both Random Forest and XGBoost models using common feature" style="display:block; margin:auto;"/>
+    </td>
+  </tr>
+</table>
+
 
    
 
