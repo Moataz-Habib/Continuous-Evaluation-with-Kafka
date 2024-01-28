@@ -104,6 +104,40 @@ suggest a left skew, indicating the direction and asymmetry of the distribution.
   </tr>
 </table>
 
+**Data Cleansing and Feature creation**
+
+I have found 8 missing values in the longest_word, I dropped them.
+The dataset contains 91,803 duplicate rows. I Removed them to help ensure data cleanliness.
+I created new features from existing categorical string variables 'sld' and 'longest_word' using feature hashing, a technique that converts categorical
+data into a fixed-size numerical format that machine learning algorithms can work with. It then removes the original columns.
+I removed the ‘timestamp' column as the issue at hand does not pertain to time series analysis.
+
+**Feature Filtering with more than 2 methods**
+
+For feature selection, Mutual Information, Recursive Feature Elimination (RFE), and ANOVA F-score methods were employed to optimize Random
+Forest and XGBoost models. A subset of common features identified by these methods was also analyzed to assess their combined predictive
+strength using F1 scores within both modeling.
+
+<table>
+  <tr>
+    <th style="text-align:center; font-size:24px;">Mutual Information</th>
+    <th style="text-align:center; font-size:24px;">RFE</th>
+    <th style="text-align:center; font-size:24px;">ANOVA</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="/Images/img11.PNG" alt="Histograms" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+    </td>
+    <td>
+      <img src="/Images/img12.PNG" alt="Boxplots" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+    </td>
+    <td>
+      <img src="/Images/img13.PNG" alt="Third Image" style="display:block; margin:auto; width:100%; max-width:300px;"/>
+    </td>
+  </tr>
+</table>
+
+
 
    
 
