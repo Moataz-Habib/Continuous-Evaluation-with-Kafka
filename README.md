@@ -5,9 +5,11 @@ To achieve the real time data delivery, I used Kafka and Dockers to simulate an 
 
 ![Example Image](/Images/img1.PNG)
 
-1.To install the local Docker and Docker Compose programs on our computers. Please use the following link to download it just take into consideration your operative system. https://docs.docker.com/get-docker
-2.Once your installation is complete, you will have the docker’s desktop interface as shown in the following image. It is not necessary to create an 3.account or to perform any upgrade, with the free version we will be able to complete the assignment
-Once it is fully installed download and unzip the folder provided that contains the scripts and the .csv with the data.
+1.To install the local Docker and Docker Compose programs on our computers. Please use the following link to download it just take into consideration your operative system. https://docs.docker.com/get-docker  
+
+2.Once your installation is complete, you will have the docker’s desktop interface as shown in the following image. It is not necessary to create an account or to perform any upgrade, with the free version we will be able to complete the assignment    
+
+3.Once it is fully installed download and unzip the folder provided that contains the scripts and the .csv with the data.
 
 ![Example Image](/Images/img2.PNG)
 
